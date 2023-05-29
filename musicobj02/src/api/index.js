@@ -6,6 +6,14 @@ export function getBanner(type=0){
 	return axios.get(`${baseUrl}/banner?type=${type}`);
 }
 
+export function getMusic(limit=10){
+	return axios.get(`${baseUrl}/personalized?limit=${limit}`);
+}
+
+export function gethub(id){
+	return axios.get(`${baseUrl}/playlist/detail?id=${id}`);
+}
+
 
 //对外抛出
-export default  {getBanner};
+export default  {getBanner,getMusic,gethub};
