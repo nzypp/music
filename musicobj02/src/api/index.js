@@ -13,7 +13,14 @@ export function getMusic(limit=10){
 export function gethub(id){
 	return axios.get(`${baseUrl}/playlist/detail?id=${id}`);
 }
+//封装获取歌词api
+export function getLyric(id){
+	return axios.get(`${baseUrl}/lyric?id=${id}`);
+}
 
+export function searchMusic(keywords){
+	return axios.get(`${baseUrl}/search?keywords=${keywords}`);
+}
 
 //对外抛出
-export default  {getBanner,getMusic,gethub};
+export default  {getBanner,getMusic,gethub,getLyric,searchMusic};
